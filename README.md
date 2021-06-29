@@ -30,6 +30,7 @@ over, without ever doing it the same way twice" - Christopher Alexander.*
 *   [Boilerplate of a class](#chapter3)
 *   [Stucture vs Class](#chapter4)
 *   [Class again!](#chapter5)
+*   [Encapsulation](#chapter6)
 *   [Credits](#credits)
 *   [Message](#message)
 
@@ -481,7 +482,7 @@ class Car
 Observe the above code carefully. We can't access id of a car object without consciously use set_id methods. 
 This is the main purpose of data access modifier.
 Now, a struct is a class where all the members are by default public. So, don't use struct if you want some private
-members. My advice is **Don't use struct at all.**
+members. <br/> My advice is **don't use struct at all.**
 <br/>
 
 <h2 id = 'chapter5'> Class again! </h2>
@@ -512,6 +513,15 @@ appropriate at all(unless we try to code in superman class or any superhero char
 
 So class should be defined appropriately with related members.   
 
+<h2 id = 'chapter6'> Encapsulation </h2>
+
+So far we have seen that class binds related data and methods all together. Generally methods 
+manipulate associated object data. This binding is called encapsulation. Encapsulation has another aspect though. 
+A good reader can easily understand that encapsulation enables access control to the data members. In 
+C++, class and access control modifiers implement encapsulation. Is there anything more about encapsulation?
+No. But you can find many resource where it is stated that encapsulation provides modularity which is true.
+But, the idea of modularity doesn't necessarily depend on encapsulation of data and methods. So, **modularity
+is not unique implication of encapsulation.**   
 
 
 <h2 id = 'credits'> Credits </h2>
