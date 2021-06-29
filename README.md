@@ -6,8 +6,8 @@
 
 <img src="https://github.com/NA-Shuvo/OOP/blob/main/images/what_is_it.jpg" alt="What is it"/>
 
-**Object Oriented Programming is like the image above. [Bjarne Stroustrup](https://www.stroustrup.com/) used it in his slide. It was meant to
-demonstrate the diverse perspectives of C++. To me it is also true for Object Oriented Programming."
+*"Object Oriented Programming is like the image above. [Bjarne Stroustrup](https://www.stroustrup.com/) used it in his slide. It was meant to
+demonstrate the diverse perspectives of C++. To me it is also true for Object Oriented Programming."*
 <br/> <br/>
 *"I think Object Oriented Programming is a capitalist idea! If you have problem with 
 capitalism I can assure you that all people including socialists, communists and GOD himself think the whole 
@@ -18,7 +18,23 @@ and over again in our environment, and then describes the core of the solution
 to that problem, in such a way that you can use this solution a million times
 over, without ever doing it the same way twice" - Christopher Alexander.*
 <br/><br/> 
- 
+  
+
+
+
+##   Contents
+
+*   [Introduction](#chapter0)
+*   [Class](#chapter1)
+*   [Defining our own class](#chapter2)
+*   [Boilerplate of a class](#chapter3)
+*   [Stucture vs Class](#chapter4)
+*   [Class again!](#chapter5)
+*   [Message](#message)
+
+
+<br/><br/>
+<h2 id = "chapter0"> Introduction </h2>
     
 **Object Oriented Programming** (later in this text I will always refer it as **OOP**) is
 a programming paradigm where we define our own data types and give them a **reasonable**, 
@@ -47,15 +63,6 @@ T.print(); // This will print "Time: 5:30"
 
 So, how can we define time in such a way? OOP provides a way of definig everything in such a way.
 Yes, everything, because **everything is object** (or atleast we can think everything as an object.)
-
-
-##   Contents
-
-*   [Class](#chapter1)
-*   [Defining our own class](#chapter2)
-*   [Boilerplate of a class](#chapter3)
-*   [Stucture vs Class](#chapter4)
-*   [Class again!](#chapter5)
 
 
 
@@ -503,6 +510,21 @@ Student class with member like number_of_wheel and move method but they may not 
 appropriate at all(unless we try to code in superman class or any superhero character from marvel). 
 
 So class should be defined appropriately with related members.   
+
+
+<h2 id = 'message'> Message </h2>
+
+I am writing this note as the lecture notes for my students of summer 21. But anyone can use it and
+reproduce it. I am trying to follow the writing style of [Jeff Erickson](https://jeffe.cs.illinois.edu/)
+BUT yes obviously this one is going to be failed. If you want to learn OOP really, you should read
+[Stroustrup's](https://www.stroustrup.com/) book [The C++ Programming Language](https://www.stroustrup.com/4th.html).
+BTW, this book is availabe in various versions in internet. 
+
+Ahh, wait, in this corona pandemic many people here in Bangladesh have become jobless, (homeless, and foodless).
+I am trying to raise a personal fund to help few of those people(as much as I can). You can contribute to 
+that fund. If you are in Bangladesh you can bKash money to **+8801716338388**. If you really contribute, please update
+[this](https://docs.google.com/spreadsheets/d/1N0gs5iwlseRnGKadSHgVEJivJ3b9hinEjhDlSWhBOnQ/edit?usp=sharing) form. And, for my students, you don't need to contribute to this fund. Try to save by yourself and help other! 
+ 
 
 
 
