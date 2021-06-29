@@ -6,7 +6,9 @@
 
 <img src="https://github.com/NA-Shuvo/OOP/blob/main/images/what_is_it.jpg" alt="What is it"/>
 
-
+**Object Oriented Programming is like the image above. [Bjarne Stroustrup](https://www.stroustrup.com/) used it in his slide. It was meant to
+demonstrate the diverse perspectives of C++. To me it is also true for Object Oriented Programming."
+<br/> <br/>
 *"I think Object Oriented Programming is a capitalist idea! If you have problem with 
 capitalism I can assure you that all people including socialists, communists and GOD himself think the whole 
 universe in an object oriented way."*
@@ -16,7 +18,7 @@ and over again in our environment, and then describes the core of the solution
 to that problem, in such a way that you can use this solution a million times
 over, without ever doing it the same way twice" - Christopher Alexander.*
 <br/><br/> 
-
+ 
     
 **Object Oriented Programming** (later in this text I will always refer it as **OOP**) is
 a programming paradigm where we define our own data types and give them a **reasonable**, 
