@@ -1,10 +1,16 @@
 
 #   Object Oriented Programming
+<br/>
 
 *"I think Object Oriented Programming is a capitalist idea! If you have problem with 
 capitalism I can assure you that all people including socialists, communists and GOD himself think the whole 
-universe in an object oriented way."* 
+universe in an object oriented way."*
 <br/> <br/>
+*"Each pattern describes a problem which occurs over
+and over again in our environment, and then describes the core of the solution
+to that problem, in such a way that you can use this solution a million times
+over, without ever doing it the same way twice" - Christopher Alexander.*
+<br/><br/> 
 
     
 **Object Oriented Programming** (later in this text I will always refer it as **OOP**) is
@@ -42,6 +48,7 @@ Yes, everything, because **everything is object** (or atleast we can think every
 *   [Defining our own class](#chapter2)
 *   [Boilerplate of a class](#chapter3)
 *   [Stucture vs Class](#chapter4)
+*   [Class again!](#chapter5)
 
 
 
@@ -177,7 +184,7 @@ int main()
 The object t1 and t2 are of same type (namely Time) BUT they are different objects. They hold different
 memory. **Objects of the same class type never hold same memory.** They belong to same class but 
 their memory addresses are different. It's like we human beings are all human beings BUT we all are different than each other.
-Jeff Erickson and Coreman are different people BUT both of them are human beings. <br/>
+[Jeff Erickson](https://jeffe.cs.illinois.edu/) and [Thomas H. Coreman](https://www.cs.dartmouth.edu/~thc/) are different people BUT both of them are human beings. <br/>
 
 Now we can write our own class type. So far our objects only consist of data. But an object is
 NOT only a collections of data. An object can behave or it can accomplish some functionalities.
@@ -274,8 +281,8 @@ int main()
     car1.move(5);
 
     // Shows the updated meter information
-    car1.show();
-    car2.show();
+    car1.show_meter();
+    car2.show_meter();
 
     return 0;
 
@@ -442,6 +449,11 @@ class Car
         fuel_cost_per_second = value;
     }
 
+    int set_id(int x):
+    {
+        id = x;
+    }
+
     int get_id()
     {
         return id;
@@ -451,6 +463,44 @@ class Car
 };
 
 ```
-
+Observe the above code carefully. We can't access id of a car object without consciously use set_id methods. 
+This is the main purpose of data access modifier.
 Now, a struct is a class where all the members are by default public. So, don't use struct if you want some private
 members. My advice is **Don't use struct at all.**
+<br/>
+
+<h2 id = 'chapter5'> Class again! </h2>
+
+Let's talk about class again! Let's talk about it without codes. So far,
+Class is a definition of our own data type. Wait, is it 'data type' or only 'type'?
+Well, this is a good observation to be noted. We can surely define a class without any 
+data at all. We just define some member methods and that is all. So, sometimes class 
+can be thought of as a package of methods. For example we can define our own calculator
+class consists of only basic methods for calculations like addition, subtraction, 
+multiplication, division etc. We pass all the data as arguments of the methods.
+This type of classes are somtimes called **utility classes**. There is no data but only 
+some related methods. At this point we need to expand our ideas on object.
+An object can be anything which has physical attributes or conceptual attributes. 
+We will consider a concept as an object. So concepts are objects too. No matter a 
+physical object or a concept, we always can define classes for them until we can 
+map their attributes and behavior to data and methods. 
+
+One last thing I want to add. Think about any real world physical object. You 
+can realize any object is a constitution of related attributes and behaviors. Think about 
+a vehicle. Any vehicle. We may define a vehicle class with a number_of_wheel attribute. 
+And we may define get_number_of_wheel() method which returns the number of wheel of the 
+vehicle. We may need to store the diameter of the wheel as an attribute. 
+If there is a wheel there we may need to work with its diameter. But shoud we define a
+Student class with wheel or diameter of wheel? No. We should not. Technically we can code a 
+Student class with member like number_of_wheel and move method but they may not be 
+appropriate at all(unless we try to code in superman class or any superhero character from marvel). 
+
+So class should be defined appropriately with related members.   
+
+
+
+
+
+
+
+
