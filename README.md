@@ -2,6 +2,11 @@
 #   Object Oriented Programming
 <br/>
 
+
+
+<img src="https://github.com/NA-Shuvo/OOP/blob/main/images/what_is_it.jpg" alt="What is it"/>
+
+
 *"I think Object Oriented Programming is a capitalist idea! If you have problem with 
 capitalism I can assure you that all people including socialists, communists and GOD himself think the whole 
 universe in an object oriented way."*
