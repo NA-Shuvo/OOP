@@ -5,9 +5,9 @@
 
 
 <img src="https://github.com/NA-Shuvo/OOP/blob/main/images/what_is_it.jpg" alt="What is it"/>
+<br/>
 
-*"Object Oriented Programming is like the image above. [Bjarne Stroustrup](https://www.stroustrup.com/) used it in his slide. It was meant to
-demonstrate the diverse perspectives of C++. To me it is also true for Object Oriented Programming."*
+*"Object Oriented Programming is like the image above. You can inspect it from many different angles."*
 <br/> <br/>
 *"I think Object Oriented Programming is a capitalist idea! If you have problem with 
 capitalism I can assure you that all people including socialists, communists and GOD himself think the whole 
@@ -22,7 +22,7 @@ over, without ever doing it the same way twice" - Christopher Alexander.*
 
 
 
-##   Contents
+#   Table of Contents
 
 *   [Introduction](#chapter0)
 *   [Class](#chapter1)
@@ -30,6 +30,7 @@ over, without ever doing it the same way twice" - Christopher Alexander.*
 *   [Boilerplate of a class](#chapter3)
 *   [Stucture vs Class](#chapter4)
 *   [Class again!](#chapter5)
+*   [Credits](#credits)
 *   [Message](#message)
 
 
@@ -392,7 +393,7 @@ Class is a more general idea. To recognize the difference we need to know data a
 
 One of the important features of OOP is it provides a very CONTROLLED reuseability of classes. You can write your own class and use it in different many programs or you can put it in to the internet. Then a lot of users can reuse it. Now, when you design a class, you may NOT want to reassign any attribute value from outside of the class by accidentally. So you need to have a access control mechanism. OOP comes with an access control mechanism. C++ provides three types of data accessibility- public, private, protected. Public members can be accessed from everywhere. Private members can be accessed within the class by other public and private members(mostly by methods) and we will learn proteced accessibility later in this course.<br/>
 
-So, let's update out notion of class members with member accessibility. Public members can be accessible from anywhere. But when
+So, let's update our notion of class members with member accessibility. Public members can be accessible from anywhere. But when
 it comes to private members we need some other public members to work with them. For example if we want to update a private data 
 value we must need a public method to access it. Thus public methods can be treated like **interfaces**. An user use interface to
 interact with the private members. Private members basically provide the **implementation details**. We don't need all implementation
@@ -512,13 +513,20 @@ appropriate at all(unless we try to code in superman class or any superhero char
 So class should be defined appropriately with related members.   
 
 
+
+<h2 id = 'credits'> Credits </h2>
+
+I am trying to follow the writing style of [Jeff Erickson](https://jeffe.cs.illinois.edu/)
+BUT yes obviously this attempt is a failure. <br/>
+
+To prepare this lecture I read some chapters from [Stroustrup's](https://www.stroustrup.com/) famous book [The C++ Programming Language](https://www.stroustrup.com/4th.html). BTW, this book is availabe in various versions in internet. If you want to learn OOP (and C++) really, you should read it.  
+
+All image credits must go to internet. But, motivation for the first photo was Stroustrup's [this](https://www.youtube.com/watch?v=86xWVb4XIyE) lecture. You can watch this lecture. It's an important video.    
+
 <h2 id = 'message'> Message </h2>
 
-I am writing this note as the lecture notes for my students of summer 21. But anyone can use it and
-reproduce it. I am trying to follow the writing style of [Jeff Erickson](https://jeffe.cs.illinois.edu/)
-BUT yes obviously this one is going to be failed. If you want to learn OOP really, you should read
-[Stroustrup's](https://www.stroustrup.com/) book [The C++ Programming Language](https://www.stroustrup.com/4th.html).
-BTW, this book is availabe in various versions in internet. 
+This note is a part of CSE313: Object Oriented Programming lecture notes for my students of summer 21. But anyone can use it and
+reproduce it. 
 
 Ahh, wait, in this corona pandemic many people here in Bangladesh have become jobless, (homeless, and foodless).
 I am trying to raise a personal fund to help few of those people(as much as I can). You can contribute to 
