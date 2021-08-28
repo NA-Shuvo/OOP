@@ -43,7 +43,6 @@ over, without ever doing it the same way twice" - Christopher Alexander.*
 * [Credits](#credits)
 * [Message](#message)
 
-`<br/><br/>`
 
 <h2 id = "chapter0"> Introduction </h2>
 
@@ -141,7 +140,7 @@ int main()
 Now, observe the code very carefully. The **Time t;** statement allocates the memory for the object
 variable **t**. We don't need to care about the memory allocation of the data **hour** and **minute**
 explicitly within main function. They are automatically allocated implicitly. This is one of the main
-features of OOP. `<br/>`
+features of OOP.
 
 **hour** and **minute** are called **member data/attributes** of the object **t**. We can access to the
 member data by using **.** symbol.
@@ -207,23 +206,23 @@ int main()
 The object t1 and t2 are of same type (namely Time) BUT they are different objects. They hold different
 memory. **Objects of the same class type never hold same memory.** They belong to same class but
 their memory addresses are different. It's like we human beings are all human beings BUT we all are different than each other.
-[Jeff Erickson](https://jeffe.cs.illinois.edu/) and [Thomas H. Coreman](https://www.cs.dartmouth.edu/~thc/) are different people BUT both of them are human beings. `<br/>`
+[Jeff Erickson](https://jeffe.cs.illinois.edu/) and [Thomas H. Coreman](https://www.cs.dartmouth.edu/~thc/) are different people BUT both of them are human beings. <br/>
 
 Now we can write our own class type. So far our objects only consist of data. But an object is
 NOT only a collections of data. An object can behave or it can accomplish some functionalities.
 For example lets think of a different type of object 'car'. We need a car object for a video game
 where a car has an id, a fuel tank. It starts a race with 100 litres oil. The player
 needs to know information about speed, travelled distance, volume of existing fuel.
-These are obviously member attributes for a particular car. We need some memory to store them. `<br/>`
+These are obviously member attributes for a particular car. We need some memory to store them. <br/>
 
 But the value of these attributes can be changed. The video game player can move for 5 seconds with
 current speed. This movement certainly change the value of travelled distance. Again movement causes
 fuel consumption. Thus the value of existing fuel certainly will decrease. The game player can brake his
-car. This causes the current speed falls down to zero. `<br/>`
+car. This causes the current speed falls down to zero. <br/>
 
 So, the behaviors or the functionalities of the car change the values of its attributes. To perform
 the change operation we need to define the logic of how the attributes are going to be changed
-with the particular behavior. `<br/>`
+with the particular behavior. <br/>
 
 To do so, we need to define these functionalities within the class. We can define a functionality or
 behavior by defining a function. These functions within the class are called **member functions or methods**.
@@ -389,7 +388,7 @@ void Car::show_meter()
 
 Observe the code above carefully. We move definitions of all class methods outside of the class definition. We use the name of the class
 with **double colon(::)** to specify the attachment of the class with the method. This is because we might have two methods with same
-name from different classes. In that case we must specify which method definition belongs to which class. `<br/>`
+name from different classes. In that case we must specify which method definition belongs to which class. <br/>
 
 **I like to define methods within the class.**
 
@@ -399,7 +398,7 @@ In C++, strcuture and class are almost same thing. **So, we don't need to use st
 before abandoning struct forever, we need to know the similarities and dissimilarities between them. A structure by default is a class.
 Class is a more general idea. To recognize the difference we need to know data access control mechanism in OOP.
 
-One of the important features of OOP is it provides a very CONTROLLED reuseability of classes. You can write your own class and use it in different many programs or you can put it in to the internet. Then a lot of users can reuse it. Now, when you design a class, you may NOT want to reassign any attribute value from outside of the class by accidentally. So you need to have a access control mechanism. OOP comes with an access control mechanism. C++ provides three types of member accessibility modifiers - public, private, protected. Public members can be accessed from everywhere. Private members can be accessed within the class by other public and private members(mostly by methods) and we will learn proteced accessibility later in this course.`<br/>`
+One of the important features of OOP is it provides a very CONTROLLED reuseability of classes. You can write your own class and use it in different many programs or you can put it in to the internet. Then a lot of users can reuse it. Now, when you design a class, you may NOT want to reassign any attribute value from outside of the class by accidentally. So you need to have a access control mechanism. OOP comes with an access control mechanism. C++ provides three types of member accessibility modifiers - public, private, protected. Public members can be accessed from everywhere. Private members can be accessed within the class by other public and private members(mostly by methods) and we will learn proteced accessibility later in this course. <br/>
 
 So, let's update our notion of class members with member accessibility. Public members can be accessible from anywhere. But when
 it comes to private members we need some other public members to work with them. For example if we want to update a private data
@@ -411,13 +410,13 @@ For our Car class we can group members into public and private catagory. Car ids
 So, it should be a private data. If we don't want to change it ever we can make it private by using **private** keyword.
 But we may need to know the value of id for some particular instance. So to access that data, we can just define another
 member method say **get_id**. This method will return the value of id of the car. BUT we must define this method with
-public accessibility. `<br/>`
+public accessibility. <br/>
 
 Next we can talk about fuel_cost_per_hour. An object has some core, hardly changeable qualities. Like a car fuel
 consumption rate is a hardly changeable quality. This type of data should not be changed accidentally. So, We can define
 this type of data as private one. And to work with this data we can define public methods. Thus, to update their values
 an user must need to **consciously** use the method as interface. Thus the possibility of accidental modification of private data
-is reduced! In this example we can define a public method to update . `<br/>`
+is reduced! In this example we can define a public method to update . <br/>
 
 Let's have a loot at the updated version of Car class with access modifiers.
 
@@ -490,8 +489,7 @@ class Car
 Observe the above code carefully. We can't access id of a car object without consciously use set_id methods.
 This is the main purpose of data access modifier.
 Now, a struct is a class where all the members are by default public. So, don't use struct if you want some private
-members. `<br/>` My advice is **don't use struct at all.**
-`<br/>`
+members. <br/> My advice is **don't use struct at all.** <br/>
 
 <h2 id = 'chapter5'> Class again! </h2>
 
@@ -559,22 +557,22 @@ of the switchboard. He just need tp understand those public methods of a class/m
 details. For example, we just need to know how to call the move function, i.e the parameter list, the return values and dependencies(if any),
 we don't need to understand the implementational details at all.
 
-```
-How to use interfaces:
 
-Step 1: Go to the document website or related blogs or tutorial site for the module.
-Step 2: Download and install the module
-Step 3: Read the document carefully
-Step 4: Import or include the specific class from the module.
-Step 5: Create an object
-Step 6: Read the document to use a specific interface. 
-        Carefully read  1.  The must needed arguments
-                        2.  The return values
-                        3.  Error cases
-                        4.  Dependences(like you are not permitted to call an interface before calling another specific interface etc)
-Step 7: Check if it works. If so, you are all done, if not, carefully read the error message. Then try to remove it. Discuss about it in community blog. 
+**How to use interfaces:**
 
-```
+*   Step 1: Go to the document website or related blogs or tutorial site for the module.
+*   Step 2: Download and install the module
+*   Step 3: Read the document carefully
+*   Step 4: Import or include the specific class from the module.
+*   Step 5: Create an object
+*   Step 6: Read the document to use a specific interface. Carefully read: 
+    *   1.  The must needed arguments
+    *   2.  The return values
+    *   3.  Error cases
+    *   4.  Dependences(like you are not permitted to call an interface before calling another specific interface etc)
+*   Step 7: Check if it works. If so, you are all done, if not, carefully read the error message. Then try to remove it. Discuss about it in community blog. 
+
+
 
 <h2 id = 'adt'> Abstract Data Type in a nutshell </h2>
 
@@ -629,14 +627,14 @@ Sometimes, we can confuse class with ADT. Class is NOT ADT. Class is a mechanism
 ADT. Classes are dependent on the programming language, ADTs are not. They are independent of
 any implementational process.
 
-```
-How to implement your own data type/structures?
 
-Step 1: Construct an ADT for the data structure.
-Step 2: Select a preferable object oriented language.
-Step 3: Choose efficient algorithms to define the interfaces. You may also need some additional data structures.
-Step 4: Implements it with class.
-```
+**How to implement your own data type/structures?**
+
+*   Step 1: Construct an ADT for the data structure.
+*   Step 2: Select a preferable object oriented language.
+*   Step 3: Choose efficient algorithms to define the interfaces. You may also need some additional data structures.
+*   Step 4: Implement it with class.
+
 
 **Note: ADTs roughly are the list of interfaces of a class in simple English or any other language.**
 
@@ -707,15 +705,13 @@ delete c;
 
 Now we are ready to go for the full implementation of our Stack ADT.
 
-```
-The key idea:
 
-Step 1: We will define an integer pointer that will point the array when a stack object will be created. For this we will use constructor function. Let's fix the array size to 100. If the size is exceeded, an error message will be displayed. To do so, we will use notthorw keyword with new. This will return NULL to the pointer in case of memory overflow. 
+**The key idea:**
 
-Step 2: We will define the interfaces.
+*   Step 1: We will define an integer pointer that will point the array when a stack object will be created. For this we will use constructor function. Let's fix the array size to 100. If the size is exceeded, an error message will be displayed. To do so, we will use notthorw keyword with new. This will return NULL to the pointer in case of memory overflow. 
+*   Step 2: We will define the interfaces.
+*   Step 3: We will define a destructor function. It will handle the delete operation.
 
-Step 3: We will define a destructor function. It will handle the delete operation.
-```
 
 ```cpp
 
@@ -811,16 +807,14 @@ class. A derived class can be inherited from multiple base classes. In that case
 need not to be re-written inm derived class. They will be just be called as if they were explicitly coded in the derived class. This
 is the magic of inheritance. 
 
-```
-How to inherit members from a single base class?
 
-Step 1: Define base class.
-Step 2: Define derived class and inherit members from the base class by using ':' operator with access modifiers following the class name.
-        class derived_class_name : access_modifiers base_class_name {required definitions};
+**How to inherit members from a single base class?**
 
-Step 3: Choose preferable constructor name if there are one or more non-default constructors.
+*   Step 1: Define base class.
+*   Step 2: Define derived class and inherit members from the base class by using ':' operator with access modifiers following the class name.**class derived_class_name : access_modifiers base_class_name {required definitions};**
+*   Step 3: Choose preferable constructor name if there are one or more non-default constructors.
 
-```
+<br/>
 
 ```cpp
 
@@ -868,18 +862,16 @@ class Student : public Person
 
 ```
 
-```
-How to inherit members from multiple base classes?
 
-Step 1: Define base classes.
-Step 2: Define derived class and inherit members from the base class by using ':' operator with access modifiers following the class names. Use comma(,) between base classes to mention them separately.
-        class derived_class_name : access_modifiers1 base_class_name1, access_modifiers2 base_class_name2, ..... {required definitions};
+**How to inherit members from multiple base classes?**
 
-Step 3: Choose preferable constructor name if there are one or more non-default constructors. If different constructors from different base classes are needed, mention all of them with comma(,) separation.
+*   Step 1: Define base classes.
+*   Step 2: Define derived class and inherit members from the base class by using ':' operator with access modifiers following the class names. Use comma(,) between base classes to mention them separately.
+        **class derived_class_name : access_modifiers1 base_class_name1, access_modifiers2 base_class_name2, ..... {required definitions};**
+*   Step 3: Choose preferable constructor name if there are one or more non-default constructors. If different constructors from different base classes are needed, mention all of them with comma(,) separation.
+*   Step 4: In case of function name ambiguity, override the function. In case of mentioning any specific base class use scope operator(::) to mention it.
 
-Step 4: In case of function name ambiguity, override the function. In case of mentioning any specific base class use scope operator(::) to mention it.
-
-```
+<br/>
 
 
 ```cpp
