@@ -38,6 +38,8 @@ over, without ever doing it the same way twice" - Christopher Alexander.*
     * [new and delete](#nd) 
   * [Destructors](#chapter7.3)
   * [Others: copy, move](#chapter7.4)
+* [Inheritance](#inheritance)
+* [Polymorphism](#polymorph)
 * [Credits](#credits)
 * [Message](#message)
 
@@ -703,7 +705,7 @@ Car *c = new Car();
 delete c;
 ```
 
-Now we are ready to go for the full implementation of our Stack ADT. 
+Now we are ready to go for the full implementation of our Stack ADT.
 
 ```
 The key idea:
@@ -714,6 +716,307 @@ Step 2: We will define the interfaces.
 
 Step 3: We will define a destructor function. It will handle the delete operation.
 ```
+
+```cpp
+
+class Stack
+{
+    private:
+    int *arr = nullptr;
+    int *top = nullptr;
+    int *last = nullptr;
+    int sz = 5;
+
+    public:
+
+    Stack()
+    {
+        arr = new(nothrow) int[sz];
+        last = &arr[sz -1];
+
+    }
+
+    void push(int item)
+    {
+
+        if (top == nullptr)
+            top = arr;
+        else
+            top++;
+
+        if( top == last){
+            cout << "Stack memory overflow" << endl;
+            return;
+        }
+
+        *top = item;
+
+    }
+
+    int pop()
+    {
+        int result = -1;
+
+        if (top == nullptr)
+        {
+            cout << "Stack memory underflow" << endl;
+        }
+        else
+        {
+
+            result = *top;
+
+            if(top == arr)
+                top = nullptr;
+            else
+                top--;
+
+        }
+
+        return result;
+
+    }
+
+    int pick()
+    {
+        return *top;
+    }
+
+    bool is_empty()
+    {
+        bool result = false;
+
+        if(top == nullptr)
+            result = true;
+
+        return result;
+    }
+
+    ~Stack()
+    {
+        delete [] arr, top, last;
+    }
+
+
+};
+```
+
+<h2 id = 'inheritance'> Inheritance </h2>
+
+*Inheritance is all about less coding.*
+
+Inheritance is the process of obtaining the members from one class to another class. It establishes the relationship among two or 
+more classes. The class from which the members are inherited is called base class and to which they are inherited is called derived
+class. A derived class can be inherited from multiple base classes. In that case it is called multiple inheritance. Inherited members
+need not to be re-written inm derived class. They will be just be called as if they were explicitly coded in the derived class. This
+is the magic of inheritance. 
+
+```
+How to inherit members from a single base class?
+
+Step 1: Define base class.
+Step 2: Define derived class and inherit members from the base class by using ':' operator with access modifiers following the class name.
+        class derived_class_name : access_modifiers base_class_name {required definitions};
+
+Step 3: Choose preferable constructor name if there are one or more non-default constructors.
+
+```
+
+```cpp
+
+// Base class
+
+class Person
+{
+    public:
+    string name;
+    int age;
+
+    Person(string Name, int Age)
+    {
+        name = Name;
+        age = Age;
+    }
+
+    void show_details()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+
+};
+
+// Derived class
+
+class Student : public Person
+{
+    public:
+    int id;
+
+    Student(string Name, int Age, int Id) : Person(Name, Age)
+    {
+        id = Id;
+    }
+
+    void show_details()
+    {
+        Person::show_details();
+        cout << "Id: " << id << endl;
+    }
+
+};
+
+```
+
+```
+How to inherit members from multiple base classes?
+
+Step 1: Define base classes.
+Step 2: Define derived class and inherit members from the base class by using ':' operator with access modifiers following the class names. Use comma(,) between base classes to mention them separately.
+        class derived_class_name : access_modifiers1 base_class_name1, access_modifiers2 base_class_name2, ..... {required definitions};
+
+Step 3: Choose preferable constructor name if there are one or more non-default constructors. If different constructors from different base classes are needed, mention all of them with comma(,) separation.
+
+Step 4: In case of function name ambiguity, override the function. In case of mentioning any specific base class use scope operator(::) to mention it.
+
+```
+
+
+```cpp
+
+// Base class 1
+
+class Person
+{
+    public:
+    string name;
+    int age;
+
+    Person(string Name, int Age)
+    {
+        name = Name;
+        age = Age;
+    }
+
+    void show_details()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+
+};
+
+// Base class 2
+
+class Student : public Person
+{
+    public:
+    int id;
+
+    Student(string Name, int Age, int Id) : Person(Name, Age)
+    {
+        id = Id;
+    }
+
+    void show_details()
+    {
+        Person::show_details();
+        cout << "Id: " << id << endl;
+    }
+
+};
+
+
+// Derived class
+
+class CR : public Person, public Student
+{
+    public:
+    bool is_CR;
+    string mobile;
+
+    CR(string Name, int Age, int Id, string Mobile): Student(Name, Age, Id), Person(Name, Age)
+    {
+        is_CR = true;
+        mobile = Mobile;
+    }
+
+    void show_details()
+    {
+        Student::show_details();
+        cout << "Mobile: " << mobile << endl;
+    }
+};
+
+
+```
+
+<h2 id = 'polymorph'> Polymorphism </h2>
+
+*Best actors are those who can act in different roles.*
+
+When the same entity (function or object) behaves differently in different scenarios, it is known as Polymorphism in C++. We have
+already learn a portion of polymorphism in the name of function overriding. Overriding is rewriting the method with same name in different class. On the otherhand, overloading is multiple definitions of methods with same name(but obviously with different parameters or return type or both) within the same class. We can also overload some operators that means we can define the outputs of operation with operators on our own.
+Both type of overloading happen in compile time. Let's observe some overloading.
+
+
+```cpp
+
+class Operation
+{
+    public:
+    int sum(int a, int b)
+    {
+        return a + b;
+    }
+
+    string sum( string a, string b)
+    {
+        return a + ' ' + b;
+    }
+
+    double sum(double a, double b)
+    {
+        return a + b;
+    }
+
+};
+
+
+```
+The sum method takes different arguments and process them accordingly. Operator overloading is sometimes more
+interesting. Let's add two complex number like integer addition.
+
+```cpp
+
+class Complex
+{
+    public:
+    int a,b;
+
+    Complex(int A, int B)
+    {
+        a = A;
+        b = B;
+    }
+
+    Complex operator+(Complex other)
+    {
+        Complex result = Complex(a + other.a, b + other.b);
+        return result;
+
+    }
+
+    show()
+    {
+        cout << a << "+" << b << "j" << endl;
+    }
+};
+
+
+```
+
+
 
 <h2 id = 'credits'> Credits </h2>
 
