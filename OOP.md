@@ -1,30 +1,19 @@
-# Object Oriented Programming
+# Object Oriented Programming  
 
-<br/>
 
 <img src="https://github.com/NA-Shuvo/OOP/blob/main/images/what_is_it.jpg" alt="What is it"/>
 <br/>
 
-*"Object Oriented Programming is like the image above. You can inspect it from many different angles."*
+> Object Oriented Programming is like the image above. You can inspect it from many different angles.
 
-<br/>
+> I think Object Oriented Programming is a capitalist idea! If you have problem with capitalism I can assure you that all including socialists, communists and GOD himself think the whole universe in an object oriented way.  
 
-*"I think Object Oriented Programming is a capitalist idea! If you have problem with
-capitalism I can assure you that all people including socialists, communists and GOD himself think the whole
-universe in an object oriented way."*
+> Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice - Christopher Alexander.
 
-<br/>
+> Object-oriented programming is an exceptionally bad idea which could only have originated in California.- Edsger W. Dijkstra
 
-*"Each pattern describes a problem which occurs over
-and over again in our environment, and then describes the core of the solution
-to that problem, in such a way that you can use this solution a million times
-over, without ever doing it the same way twice" - Christopher Alexander.*
+***
 
-<br/>
-
-*"Object-oriented programming is an exceptionally bad idea which could only have originated in California." - Edsger W. Dijkstra*
-
-<br/>
 
 # Table of Contents
 
@@ -47,11 +36,8 @@ over, without ever doing it the same way twice" - Christopher Alexander.*
     *   [Polymorphism](#poly)
         *   [Virtual Function](#vf)
 *   [Credits](#credits)
-*   [Message](#message)
+*   [Message](#message)  
 
-<br/>
-<br/>
-<br/>
 
 <h1 id = "partI"> PART I: Perspectives and Implementation </h1>  
 
